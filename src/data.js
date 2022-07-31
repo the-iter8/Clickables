@@ -1,11 +1,7 @@
-// Bookmarklets!
-// Please make sure that you replace all the  "" with ''
-// Just ignore the %27 error that your code editor is giving.
-
 const codes = [
   {
     id: 1,
-    code: `javascript: (() => {
+    code: `(() => {
       var word = prompt('Please enter the word here. ');
       const url =
         'https://www.dictionaryapi.com/api/v3/references/thesaurus/json/' +
@@ -27,7 +23,7 @@ const codes = [
   },
   {
     id: 2,
-    code: ` javascript: (function () {
+    code: `(function () {
       var speed = prompt('Enter your preferable speed. ');
       if (speed !== null) {
         document.getElementsByClassName(%27html5-main-video%27)[0].playbackRate = speed;
@@ -53,4 +49,6 @@ const steps = [
   },
 ];
 
-export default { codes, steps };
+const data = { codes, steps };
+
+export default data;

@@ -1,16 +1,17 @@
 import './App.css';
 import Navbar from './Components/Navbar';
 import Header from './Components/Header';
-import Drawer from './Components/Drawer';
 import Content from './Components/Content';
+import Contact from './Components/Contact';
 
 function App() {
   return (
-    <div className='App'>
+    <>
       <Navbar />
+      <Contact />
       <Header />
       <Content />
-    </div>
+    </>
   );
 }
 

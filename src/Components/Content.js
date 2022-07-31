@@ -14,7 +14,7 @@ export default function SimpleAccordion() {
   return (
     <Container sx={{ width: '75%', mt: 4 }}>
       {codes.map((item) => {
-        const { id, code, note, title, desc } = item;
+        const { id, code, title, desc } = item;
         return (
           <Accordion
             key={id}
@@ -56,8 +56,8 @@ export default function SimpleAccordion() {
                   color: '#E7AB79',
                 }}
               >
-                <SnackBar code={code} />
-                <pre>{code}</pre>
+                <SnackBar code={`javascript:${code}`} />
+                <pre>javascript:{code}</pre>
               </Paper>
             </AccordionDetails>
           </Accordion>

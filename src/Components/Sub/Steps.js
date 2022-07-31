@@ -59,7 +59,7 @@ export default function VerticalLinearStepper() {
         <Paper square elevation={1} sx={{ p: 3 }}>
           <Typography>
             All steps completed! Now you can just click on each Clickable and
-            use them accordingly!
+            use them !
           </Typography>
           <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
             Reset
