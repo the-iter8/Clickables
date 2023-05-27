@@ -35,7 +35,6 @@ const theme = createTheme({
 root.render(
   <React.StrictMode>
     <CssBaseline />
-
     <ThemeProvider theme={theme}>
       <App />
     </ThemeProvider>

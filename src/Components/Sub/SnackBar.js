@@ -1,24 +1,24 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import Snackbar from '@mui/material/Snackbar';
-import IconButton from '@mui/material/IconButton';
-import { MdClose } from 'react-icons/md';
+import * as React from "react";
+import Button from "@mui/material/Button";
+import Snackbar from "@mui/material/Snackbar";
+import IconButton from "@mui/material/IconButton";
+import { MdClose } from "react-icons/md";
 
 export default function SimpleSnackbar({ code }) {
   const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
     setOpen(true);
-    const textField = document.createElement('textarea');
+    const textField = document.createElement("textarea");
     textField.innerText = code;
     document.body.appendChild(textField);
     textField.select();
-    document.execCommand('copy');
+    document.execCommand("copy");
     textField.remove();
   };
 
   const handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
+    if (reason === "clickaway") {
       return;
     }
 
@@ -27,12 +27,7 @@ export default function SimpleSnackbar({ code }) {
 
   const action = (
     <React.Fragment>
-      <IconButton
-        size='small'
-        aria-label='close'
-        color='inherit'
-        onClick={handleClose}
-      >
+      <IconButton size='small' aria-label='close' color='inherit' onClick={handleClose}>
         <MdClose />
       </IconButton>
     </React.Fragment>
@@ -49,8 +44,8 @@ export default function SimpleSnackbar({ code }) {
         sx={{
           right: 0,
           mx: 2,
-          position: 'absolute',
-          cursor: 'pointer',
+          position: "absolute",
+          cursor: "pointer",
         }}
       >
         Copy
